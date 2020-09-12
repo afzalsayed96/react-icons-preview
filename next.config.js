@@ -1,13 +1,6 @@
-const withPWA = require("next-pwa");
-
 const path = require("path");
 
-module.exports = withPWA({
-  pwa: {
-    dest: "public",
-    register: true,
-    scope: "/",
-  },
+module.exports = {
   webpack: (config, { isServer }) => {
     // Fixes npm packages that depend on fs module, see github.com/zeit/next.js/issues/7755
     if (!isServer) {
@@ -26,4 +19,4 @@ module.exports = withPWA({
   publicRuntimeConfig: {
     basePath: process.env.BASE_PATH || "",
   },
-});
+};
