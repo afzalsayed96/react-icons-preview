@@ -6,3 +6,4 @@ module
 *.tgz
 .next
 out
+.DS_Store
